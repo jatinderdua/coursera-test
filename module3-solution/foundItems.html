@@ -1,0 +1,19 @@
+<table>	
+  <tr ng-repeat="item in narrowDownList.found">
+    <td>{{ item.name }}</td>
+		<td>{{ item.short_name }}</td>
+    <td>{{ item.description }}</td>
+		<td><button ng-click="narrowDownList.onRemove({index: $index});">Remove Item</button></td>
+  </tr>
+</table>
+<div class="error" ng-if="narrowDownList.found.length == 0">NO ITEMS FOUND</div>
+<!--
+
+<ul>
+	<li ng-repeat="item in narrowDownList.found">
+		{{item.description}}
+		<button ng-click="narrowDownList.onRemove({index: $index});">Remove Item</button>
+	</li>
+</ul>
+<div class="error" ng-if="narrowDownList.found.length == 0">NO ITEMS FOUND</div>
+-->
